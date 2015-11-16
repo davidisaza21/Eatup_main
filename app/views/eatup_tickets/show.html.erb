@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ticket number:</strong>
+  <%= @eatup_ticket.ticket_number %>
+</p>
+
+<p>
+  <strong>Eatup user:</strong>
+  <%= @eatup_ticket.eatup_user_id %>
+</p>
+
+<p>
+  <strong>Eatup event:</strong>
+  <%= @eatup_ticket.eatup_event_id %>
+</p>
+
+<%= link_to 'Edit', edit_eatup_ticket_path(@eatup_ticket) %> |
+<%= link_to 'Back', eatup_tickets_path %>

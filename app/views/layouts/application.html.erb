@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EatupEvents</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,300,500,700,600' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class='eatup_header'>
+
+		<%= image_tag ('eatuplogo.png'), :class => 'hdr_logo' %>
+
+		<div class='header_nav'>
+			<li id='hdr_nav'>
+				<%= link_to 'EVENTS', eatup_events_path, :class => 'hdr_nav' %>
+			</li>
+			<li id='hdr_nav'>
+				<%= link_to 'LOGIN', eatup_users_path, :class => 'hdr_nav' %>
+			</li>
+			<li id='hdr_su'>
+					<%= link_to 'SIGN UP FOR FREE', new_eatup_user_path, :class => 'hdr_su' %>
+			</li>
+		</div>
+	</div>
+
+<%= yield %>
+
+	<div class="eatup_footer">
+		&copy; All rights reserved Eat Up Events 2015.
+	</div>
+
+</body>
+</html>

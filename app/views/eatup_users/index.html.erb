@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eatup Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eatup_users.each do |eatup_user| %>
+      <tr>
+        <td><%= eatup_user.email %></td>
+        <td><%= eatup_user.name %></td>
+        <td><%= eatup_user.password %></td>
+        <td><%= link_to 'Show', eatup_user %></td>
+        <td><%= link_to 'Edit', edit_eatup_user_path(eatup_user) %></td>
+        <td><%= link_to 'Destroy', eatup_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eatup user', new_eatup_user_path %>

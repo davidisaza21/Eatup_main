@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @eatup_user.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @eatup_user.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @eatup_user.password %>
+</p>
+
+<%= link_to 'Edit', edit_eatup_user_path(@eatup_user) %> |
+<%= link_to 'Back', eatup_users_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eatup Tickets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ticket number</th>
+      <th>Eatup user</th>
+      <th>Eatup event</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eatup_tickets.each do |eatup_ticket| %>
+      <tr>
+        <td><%= eatup_ticket.ticket_number %></td>
+        <td><%= eatup_ticket.eatup_user_id %></td>
+        <td><%= eatup_ticket.eatup_event_id %></td>
+        <td><%= link_to 'Show', eatup_ticket %></td>
+        <td><%= link_to 'Edit', edit_eatup_ticket_path(eatup_ticket) %></td>
+        <td><%= link_to 'Destroy', eatup_ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eatup ticket', new_eatup_ticket_path %>

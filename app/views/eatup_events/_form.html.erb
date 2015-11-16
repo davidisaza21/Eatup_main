@@ -1,0 +1,37 @@
+<%= form_for(@eatup_event) do |f| %>
+  <% if @eatup_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eatup_event.errors.count, "error") %> prohibited this eatup_event from being saved:</h2>
+
+      <ul>
+      <% @eatup_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :chef %><br>
+    <%= f.text_field :chef %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

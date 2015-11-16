@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @eatup_event.name %>
+</p>
+
+<p>
+  <strong>Chef:</strong>
+  <%= @eatup_event.chef %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @eatup_event.date %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @eatup_event.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @eatup_event.description %>
+</p>
+
+<%= link_to 'Edit', edit_eatup_event_path(@eatup_event) %> |
+<%= link_to 'Back', eatup_events_path %>
